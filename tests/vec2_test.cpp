@@ -18,6 +18,11 @@ TEST_CASE( "Operator -" ) {
     REQUIRE( a - b == Vec2{0,0});
 }
 
+TEST_CASE( "Operator *" ) {
+    Vec2 a = {-2, 2};
+    REQUIRE( a * 2 == Vec2{-4,4});
+}
+
 TEST_CASE( "Operator =" ) {
     Vec2 a {-2, 2};
     Vec2 b {-2, 2};

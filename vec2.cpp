@@ -9,6 +9,10 @@ Vec2 Vec2::operator-(Vec2 rhs) const {
     return {x-rhs.x, y-rhs.y};
 }
 
+Vec2 Vec2::operator*(float scalar) const {
+    return {x*scalar, y*scalar};
+}
+
 void Vec2::operator=(Vec2 rhs) {
     x = rhs.x;
     y = rhs.y;

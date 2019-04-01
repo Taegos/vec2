@@ -9,6 +9,7 @@ struct Vec2 {
     float y;
     Vec2 operator+(Vec2) const;
     Vec2 operator-(Vec2) const;
+    Vec2 operator*(float) const;
     void operator=(Vec2);
     void operator+=(Vec2);
     void operator-=(Vec2);
@@ -30,67 +31,3 @@ struct Vec2 {
 };
 
 std::ostream& operator<<(std::ostream&, Vec2);
-
-    // friend std::ostream& operator <<(std::ostream& out, Vec2 const& vec) {
-    //     out << '(' << vec.x << ", " << vec.y << ')';
-    //     return out;
-    // }
-
-    // Vec2 operator+(const Vec2 &other) const {
-    //     return {x + other.x, y + other.y};
-    // }   
-
-    // Vec2 operator-(const Vec2 & other) const {
-    //     return {x - other.x, y - other.y};
-    // }
-
-    // Vec2 operator*(const Vec2 & other) const {
-    //     return {x * other.x, y * other.y};
-    // }
-
-    // Vec2 operator/(const Vec2 & other) const{
-    //     return {x / other.x, y / other.y};
-    // }
-
-    // Vec2 operator*(float scale) const {
-    //     return {x * scale, y * scale};
-    // }
-
-    // Vec2 operator/(float scale) const{
-    //     return {x / scale, y / scale};
-    // }
-            
-    // void operator*=(float scale) {
-    //     x*=scale;
-    //     y*=scale;
-    // }
-
-    // void operator/=(float scale) {
-    //     x/=scale;
-    //     y/=scale;
-    // }
-
-    // bool operator==(const Vec2 &other) const {
-    //     return abs(x-other.x) <= EPSILON && abs(y-other.y) <= EPSILON;
-    // }
-
-    // bool operator!=(const Vec2 &other) const {
-    //     return !(*this==other);
-    // }
-
-    // friend std::ostream& operator <<(std::ostream& out, Vec2 const& vec) {
-    //     out << '(' << vec.x << ", " << vec.y << ')';
-    //     return out;
-    // }
-
-    // Vec2 normalized() {
-    //     return *this / hypot(x, y);
-    // }
-
-    // float distance(const Vec2& other) {
-    //     return hypot(other.x-x, other.y-y);
-    // } 
-
-    // float cross(Vec2 other) {
-    //     return x * other.y - y * other.x;
-    // }
